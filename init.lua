@@ -84,6 +84,11 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- Change python provider to official python distributed instead of windows
+if vim.fn.has 'win32' == 1 then
+  vim.g.python3_host_prog = 'C:\\Users\\joris\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
+end
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
